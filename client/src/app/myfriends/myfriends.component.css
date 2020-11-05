@@ -1,0 +1,15 @@
+.friends{
+    padding : 2%;
+    border-left: 3px solid lightblue;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h4{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.friends h6{
+    color : rgba(0,0,0,0.3);
+}

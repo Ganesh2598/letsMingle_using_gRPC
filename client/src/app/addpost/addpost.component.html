@@ -1,0 +1,40 @@
+<div class="body">
+    <div class="container1"></div>
+    <div class="container2"></div>
+        <div class="createpost-main">
+            <div class="card createpost-container">
+                <div class="style1"></div>
+                <div class="style2"></div>
+                <h2 class="createpost-lbl">Post</h2>
+                <br/>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">event_note</i>
+                    <input id="icon_prefix" type="text" class="validate" [(ngModel)]="postData.description"/>
+                    <label for="icon_prefix">Description</label>
+                </div>
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Upload Image</span>
+                        <input type="file" (change)="uploadFile($event.target.files[0])"/>
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text"/>
+                    </div>
+                </div><br/>
+                <div class="createpost-btn">
+                    <div class="switch left">
+                        <span>PUBLIC : </span>
+                        <label>
+                        OFF
+                        <input type="checkbox" id="public" (change)="optionChange($event.target.checked)"/>
+                        <span class="lever"></span>
+                        ON
+                        </label>
+                    </div>
+                    <button class="btn waves-effect waves-light blue btn-large login-button" type="submit" name="action" (click)="onSubmit()">Post
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="add-friend">
+    <h4>My Buddiess</h4>
+    <div class="friends">
+        <h6 *ngIf="!friendsData">No people available</h6>
+        <ul class="collection" *ngFor="let item of friendsData">
+            <li class="collection-item avatar">
+                 <img src={{item.friendImage}} alt="" class="circle"/>
+                 <span class="title">{{item.friendName}}</span>
+                 <p>{{item.friendMail}}</p>
+                 <button class="waves-effect waves-light btn secondary-content" (click)="deleteHandler(item.friendMail, item.mymail)">DELETE</button>
+             </li>
+         </ul>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="/home" class="brand-logo">Let's Mingle</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/addpost" *ngIf="check.loggedIn()">ADD POST</a></li>
+      <li><a href="/addfriends" *ngIf="check.loggedIn()">ADD FRIENDS</a></li>
+      <li><a href="/myfriends" *ngIf="check.loggedIn()">MY FRIENDS</a></li>
+      <li><a href="/profile" *ngIf="check.loggedIn()">PROFILE</a></li>
+      <li><a class="waves-effect waves-light btn" *ngIf="check.loggedIn()" (click)="logout()">LOGOUT</a></li>
+      <li><a href="/login" *ngIf="!check.loggedIn()">LOGIN</a></li>
+      <li><a href="/register" *ngIf="!check.loggedIn()">REGISTER</a></li>
+    </ul>
+  </div>
+</nav>
+
+

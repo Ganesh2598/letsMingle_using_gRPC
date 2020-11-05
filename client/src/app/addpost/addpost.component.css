@@ -1,0 +1,77 @@
+.container1, .container2{
+    content:  "";
+    box-shadow: 0 0 20px 0 blue;
+    position: absolute;
+    background-color: cyan;
+    border-radius: 70%;
+}
+.container1{
+    width : 600px;
+    height : 600px;
+    left : -300px;
+    bottom: -300px;
+}
+.container2{
+    width : 500px;
+    height : 500px;
+    right : -250px;
+    top: -250px;
+    z-index: -1;
+}
+
+.style1{
+    content:  "";
+    box-shadow: 0 0 10px 0 cyan;
+    position: absolute;
+    background-color: blue;
+    width : 500px;
+    height : 50px;
+    left : -400px;
+    margin-top: 2%;
+}
+
+.style2{
+    content:  "";
+    box-shadow: 0 0 10px 0 cyan;
+    position: absolute;
+    background-color: blue;
+    width : 500px;
+    height : 50px;
+    right : -400px;
+    margin-top: 2%;
+}
+
+.createpost-container{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 7%;
+    padding: 2%;
+    height:60vh;
+    overflow: hidden;
+}
+.createpost-lbl{
+    margin-top: 2%;
+    text-align: center;
+    color: blue;
+}
+.createpost-btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+body{
+    overflow: hidden;
+}
+
+@media only screen and (max-width : 900px){
+    .style1,.style2{
+        display: none;
+    }
+}
+
+.body{
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+}

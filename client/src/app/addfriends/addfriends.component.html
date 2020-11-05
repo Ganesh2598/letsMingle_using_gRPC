@@ -1,0 +1,30 @@
+<div class="add-friend">
+    <h4>Friend Requests</h4>
+    <div class="request-container">
+        <div class="friends">
+            <h6 *ngIf="!requestData">No Request Found</h6>
+            <ul class="collection" *ngFor="let item of requestData">
+                <li class="collection-item avatar">
+                    <img src={{item.myimageUrl}} alt="" class="circle"/>
+                    <span class="title">{{item.myusername}}</span>
+                    <p>{{item.mymail}}</p>
+                    <button class="waves-effect waves-light btn secondary-content" (click)="acceptHandler(item.mymail)">ACCEPT</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h4>Peoples on Let's Mingle!!!</h4>
+    <div class="people-container">
+        <div class="friends">
+            <h6 *ngIf="!friendsData">No people available</h6>
+            <ul class="collection" *ngFor="let item of friendsData">
+                <li class="collection-item avatar">
+                    <img src={{item.imageUrl}} alt="" class="circle"/>
+                    <span class="title">{{item.username}}</span>
+                    <p>{{item.email}}</p>
+                    <button class="waves-effect waves-light btn secondary-content" (click)="addHandler(item.username,item.imageUrl,item.email)">ADD</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

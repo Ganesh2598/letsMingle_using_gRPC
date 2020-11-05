@@ -1,0 +1,68 @@
+<div class="home-main">
+    <div class="home-container1">
+        <h6>People on Let's Mingle</h6>
+        <div class="people" *ngIf="peopleData">
+            <div *ngFor="let people of peopleData">
+                <div class="person-image">
+                    <img src={{people.imageUrl}}/>
+                </div>
+            </div>
+        </div><br/>
+        <div class="post-container">
+            <div *ngIf="postData">
+                <h4 *ngIf="postData.length==0">No post yet...</h4>
+                <div *ngFor="let post of postData">
+                    <div class="row">
+                        <div class="col s12 m7">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src={{post.imageUrl}}/>
+                                    <span class="card-title">{{post.username.charAt(0).toUpperCase()+post.username.slice(1)}}</span>
+                                </div>
+                                <div class="card-content caption">
+                                    <p>{{post.description}}</p>
+                                </div>
+                                <div class="comments">
+                                    <div class="display-comments">
+                                        <div *ngIf="post.comments">
+                                            <div *ngFor="let comment of post.comments">
+                                                <div>
+                                                    <p class="sub-comment"><span>{{comment.name}} : </span>{{comment.comment}} </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form class="comment-button" (submit)="addComment($event.target[0].value,post.postid)">
+                                        <input type="text" placeholder="comments"/>
+                                        <button class="btn waves-effect waves-light blue btn-medium login-button" type="submit" name="action">Post
+                                            <i class="material-icons right">send</i>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="card-action">
+                                <button (click)="onSelect(post.email)">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="home-container2">
+            <h2>My Profile</h2>
+        <div class="profile-pic">
+            <img src={{userData.imageUrl}}/>
+        </div>
+        <br/>
+        <div class="home-container3">
+            <div class="sub-container1">
+                <span>Email</span>
+                <h6>{{userData.email}}</h6>
+                <span>User</span>
+                <h6>{{userData.username.charAt(0).toUpperCase()+userData.username.slice(1)}}</h6>
+            </div>
+        </div>
+    </div>
+</div>

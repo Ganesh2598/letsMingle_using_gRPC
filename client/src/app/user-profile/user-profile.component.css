@@ -1,0 +1,77 @@
+.profile-main{
+    display: flex;
+}
+.profile-container1{
+    width : 30%;
+    height : 100vh;
+}
+.profile-container2{
+    border-left:1px solid rgba(0,0,0,0.5);
+    width : 70%;
+    height : 100vh;
+}
+.profilePic{
+    width : 80%;
+    height : 48%;
+    padding: 7%;
+    margin-left: 5%;
+}
+.profilePic img{
+    height : 100%;
+    width : 100%;
+    border-radius: 50%;
+}
+.person-info{
+    border-left: 4px solid blue;
+    padding-left: 3%;
+    margin-left: 3%;
+}
+
+.person-info li{
+    font-size: 2.5vh;
+}
+
+.person-info span{
+    color : blue;
+}
+
+.person-name{
+    text-align: center;
+    border-bottom : 3px dotted blue;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Grenze Gotisch', cursive;
+}
+
+.images img{
+    height : 100%;
+    width : 100%;
+}
+
+.images{
+    width : 250px;
+    height : 250px;
+    padding: 1%;
+}
+.gallery{
+    padding :30px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    height : 90%;
+}
+
+.gallery-lbl{
+    text-align: center;
+    margin-left : 5%;
+    margin-right: 5%;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery h5{
+    text-align: center;
+    opacity: 0.5;
+}

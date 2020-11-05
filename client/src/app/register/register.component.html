@@ -1,0 +1,41 @@
+<div className="body">
+    <div class="container1"></div>
+    <div class="container2"></div>
+        <div class="register-main">
+            <div class="card register-container">
+                <div class="style1"></div>
+                <div class="style2"></div>
+                <h2 class="register-lbl">Register</h2>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="icon_prefix" type="text" class="validate" [(ngModel)]="registerData.name" name="name"/>
+                    <label for="icon_prefix">Full Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">mail_outline</i>
+                    <input id="icon_prefix" type="text" class="validate" [(ngModel)]="registerData.email" name="email"/>
+                    <label for="icon_prefix">Email</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">https</i>
+                    <input id="icon_prefix1" type="password" class="validate" [(ngModel)]="registerData.password" name="password"/>
+                    <label for="icon_prefix1">Password</label>
+                </div>
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Upload Image</span>
+                        <input type="file" (change)="uploadFile($event.target.files[0])" name="image"/>
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text"/>
+                    </div>
+                </div><br/>
+                <div class="register-btn">
+                    <p></p>
+                    <button class="btn waves-effect waves-light blue btn-large login-button" type="submit" name="action" (click)="onSubmit()">Register
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+        </div>
+    </div>
+</div>
